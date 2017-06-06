@@ -19,7 +19,7 @@ export class BaseRoute {
    */
   constructor() {
     //initialize variables
-    this.title = "LetMeSee";
+    this.title = "trpjs";
     this.scripts = [];
   }
 

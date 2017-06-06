@@ -7,7 +7,7 @@ import { BaseRoute } from "./base";
  *
  * @class User
  */
-export class IndexRoute extends BaseRoute {
+export class GameRoute extends BaseRoute {
 
   /**
    * Create the routes.
@@ -18,11 +18,11 @@ export class IndexRoute extends BaseRoute {
    */
   public static create(router: Router) {
     //log
-    console.log("[IndexRoute::create] Creating index route.");
+    console.log("[IndexRoute::create] Creating game route.");
 
     //add home page route
-    router.get("/", (req: Request, res: Response, next: NextFunction) => {
-      new IndexRoute().index(req, res, next);
+    router.get("/game", (req: Request, res: Response, next: NextFunction) => {
+      new GameRoute().index(req, res, next);
     });
   }
 
@@ -47,14 +47,15 @@ export class IndexRoute extends BaseRoute {
    */
   public index(req: Request, res: Response, next: NextFunction) {
     //set custom title
-    this.title = "TRPJS | Home";
+    this.title = "TRPJS | Game";
 
     //set options
     let options: Object = {
-      "message": "Welcome to trpjs"
+      message : "Welcome to the Game",
+      game : "TheGame"
     };
 
     //render template
-    this.render(req, res, "index", options);
+    this.render(req, res, "game", options);
   }
 }
