@@ -1,0 +1,20 @@
+{
+  "name": "trpjs",
+  "version": "1.0.0",
+  "description": "the rototo project in javascript",
+  "main": "www.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "DomDom",
+  "license": "MIT",
+  "dependencies": {
+    "@types/pixi.js": "^4.4.4",
+    "express": "^4.15.3",
+    "pixi.js": "^4.5.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.0.35",
+    "webpack": "^2.6.1"
+  }
+}
