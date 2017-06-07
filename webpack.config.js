@@ -1,7 +1,11 @@
 module.exports = {
   entry: './src/main.ts',
   output: {
-    filename: './dist/public/bundle.js'
+    filename: './dist/public/bundle.js',
+      devtoolModuleFilenameTemplate: function(info){
+          console.log('absoluteResourcePath', info.absoluteResourcePath);
+          return info.absoluteResourcePath;
+        }
   },
 // Enable sourcemaps for debugging webpack's output.
 devtool: "source-map",  
