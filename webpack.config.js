@@ -1,7 +1,9 @@
+var path = require('path');
 module.exports = {
   entry: './src/main.ts',
   output: {
-    filename: './dist/public/bundle.js',
+    path: path.join(__dirname, 'dist/public'),
+    filename: 'bundle.js',
       devtoolModuleFilenameTemplate: function(info){
           console.log('absoluteResourcePath', info.absoluteResourcePath);
           return info.absoluteResourcePath;
@@ -19,11 +21,10 @@ module:{
     {
   test: /\.(jpg|png|svg)$/,
   loader: 'file-loader',
+
   options: 
     {
-    name: 'img-[hash].[ext]',
-    outputPath : 'dist/public/data/images/',
-    publicPath : '.'
+    name: 'data/images/img-[hash].[ext]'
     }
   }
   ]
