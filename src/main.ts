@@ -1,11 +1,12 @@
 import * as PIXI from "pixi.js";
+var img_bunny = require("../data/images/bunny.png");
 
 
 let renderer = PIXI.autoDetectRenderer(800, 600, {backgroundColor: 0x1099bb});
 document.body.appendChild(renderer.view);
 
 let stage = new PIXI.Container();
-let texture = PIXI.Texture.fromImage("bunny.png");
+let texture = PIXI.Texture.fromImage(img_bunny);
 let bunny = new PIXI.Sprite(texture);
 bunny.anchor.x = 0.5;
 bunny.anchor.y = 0.5;
