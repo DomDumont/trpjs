@@ -4,6 +4,13 @@ import { Bunny } from "./bunny";
 
 
 let renderer = PIXI.autoDetectRenderer(800, 600, {backgroundColor: 0x1099bb});
+
+//Center renderer in page
+renderer.view.style.position = 'absolute';
+renderer.view.style.left = '50%';
+renderer.view.style.top = '50%';
+renderer.view.style.transform = 'translate3d( -50%, -50%, 0 )';
+
 document.body.appendChild(renderer.view);
 
 let stage = new PIXI.Container();
